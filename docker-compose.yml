@@ -1,0 +1,25 @@
+version: '2' # specify docker-compose version
+
+
+
+# Define the services/containers to be run
+
+services:
+
+  angular: # name of the first service
+
+    build: sample-docker-angular-project # specify the directory of the Dockerfile
+
+    ports:
+
+      - "5200:4200" # specify port forewarding
+
+
+
+  express: #name of the second service
+
+    build: sample-docker-express-project # specify the directory of the Dockerfile
+
+    ports:
+
+      - "5000:3000" #specify ports forewarding
